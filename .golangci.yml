@@ -1,0 +1,15 @@
+linters:
+  enable-all: true
+  disable:
+    - gochecknoglobals
+    - gochecknoinits
+
+run:
+  skip-dirs:
+    - .test
+    - dist
+    - docs
+    - vendors
+
+service:
+  golangci-lint-version: 1.15.x
