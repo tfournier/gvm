@@ -45,5 +45,6 @@ func (gvm gvm) ShowConfig() {
 func (gvm gvm) Config() map[string]string {
 	var e = make(map[string]string)
 	e["GOROOT"] = path.Join(gvm.path, sdkDirName, sdkUsedDirName)
+	e["PATH"] = "$PATH:" + path.Join(gvm.path, sdkDirName, sdkUsedDirName, "bin")
 	return e
 }

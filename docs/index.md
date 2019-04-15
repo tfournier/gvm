@@ -5,25 +5,28 @@ GVM is a version manager for Golang, it is easy to use and compatible with all p
 
 # Install
 
-## Install the pre-compiled binary
-
-**Homebrew** (for macOS):
+## For macOS ([Homebrew](https://brew.sh))
 
 ```bash
 brew install tfournier/tap/gvm
 ```
 
-**Scoop** (for Windows):
+## For linux ([Snapcraft](https://snapcraft.io/))
+[![Installer à partir du Snap Store](https://snapcraft.io/static/images/badges/fr/snap-store-black.svg)](https://snapcraft.io/gvm)
 
-```text
+```bash
+snap install gvm
+```
+
+## For windows ([Scoop](https://scoop.sh/))
+
+```bash
 scoop install gvm
 ```
 
-**Linux** manually:
+## Manually
 
-```bash
-wget -qO- https://github.com/tfournier/gvm/releases/latest/download/gvm_Linux_x86_64.tar.gz | tar xvz - -C /usr/local/bin gvm
-```
+Go to [releases](https://github.com/tfournier/gvm/releases) page
 
 ## Check installed
 

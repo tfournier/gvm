@@ -1,17 +1,26 @@
 language: go
 go:
-  - 1.12.x
+- 1.12.x
 services:
-  - docker
+- docker
 addons:
   apt:
     packages:
-      - rpm
-      - snapd
+    - rpm
+    - snapd
+env:
+- PATH=/snap/bin:$PATH
+install:
+- sudo snap install snapcraft --classic
+after_success:
+- test -n "$TRAVIS_TAG" && snapcraft login --with snap.login
 deploy:
-  - provider: script
-    skip_cleanup: true
-    script: curl -sL https://git.io/goreleaser | bash
-    on:
-      tags: true
-      condition: $TRAVIS_OS_NAME = linux
+- provider: script
+  skip_cleanup: true
+  script: curl -sL https://git.io/goreleaser | bash
+  on:
+    tags: true
+    condition: "$TRAVIS_OS_NAME = linux"
+before_install:
+- openssl aes-256-cbc -K $encrypted_c5b439316657_key -iv $encrypted_c5b439316657_iv
+  -in snap.login.enc -out snap.login -d

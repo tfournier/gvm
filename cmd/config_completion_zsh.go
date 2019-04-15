@@ -9,7 +9,6 @@ var configCompletionZshCmd = &cobra.Command{
 	Use:   "zsh",
 	Short: "Generates shell completion for ZSH",
 	RunE: func(cmd *cobra.Command, args []string) error {
-
 		return zshcompletion.Zsh(cmd.Root()).GenCompletionUser()
 	},
 }

@@ -9,6 +9,7 @@
 [![GolangCI](https://golangci.com/badges/github.com/tfournier/gvm.svg)](https://golangci.com/r/github.com/tfournier/gvm)
 [![GoReportCard](https://goreportcard.com/badge/github.com/tfournier/gvm)](https://goreportcard.com/report/github.com/tfournier/gvm)
 [![Build Status](https://travis-ci.org/tfournier/gvm.svg?branch=master)](https://travis-ci.org/tfournier/gvm)
+[![gvm](https://snapcraft.io/gvm/badge.svg)](https://snapcraft.io/gvm)
 
 Golang Version Manager will allow you to easily install, use and/or delete Golang versions from the official servers
 

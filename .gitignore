@@ -36,6 +36,7 @@ Temporary Items
 /bin
 /vendor
 .env
+snap.login
 
 # Releases
 /dist

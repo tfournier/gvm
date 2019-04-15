@@ -169,11 +169,12 @@ func (sdk sdk) Download(version string) (string, error) {
 			}
 		}
 		if err := resp.Err(); err != nil {
-			fmt.Printf("\rDownloading %v... failed", req.URL())
+			fmt.Printf("\rDownloading %v... failed\n", req.URL())
 			return "", err
 		}
 		if resp.IsComplete() {
 			if err := os.Rename(fmt.Sprintf("%s.tmp", destination), destination); err != nil {
+				fmt.Printf("\rDownloading %v... failed\n", req.URL())
 				return "", err
 			}
 		}
@@ -204,24 +205,21 @@ func (sdk sdk) Install(version string) error {
 		if err != nil {
 			return err
 		}
-		fmt.Printf("\rInstalling SDK %s... creating temp directory", version)
+		fmt.Printf("Installing SDK %s...", version)
 		dir, err := ioutil.TempDir("", version)
 		if err != nil {
 			fmt.Printf("\rInstalling SDK %s... failed", version)
 			return err
 		}
 		defer os.RemoveAll(dir)
-		fmt.Printf("\rInstalling SDK %s... unarchive", version)
 		if err := archiver.Unarchive(download, dir); err != nil {
 			fmt.Printf("\rInstalling SDK %s... failed", version)
 			return err
 		}
-		fmt.Printf("\rInstalling SDK %s... create directories", version)
 		if err := os.MkdirAll(sdk.path, 0755); err != nil {
 			fmt.Printf("\rInstalling SDK %s... failed", version)
 			return err
 		}
-		fmt.Printf("\rInstalling SDK %s... move directory", version)
 		if err := os.Rename(path.Join(dir, "go"), path.Join(sdk.path, version)); err != nil {
 			fmt.Printf("\rInstalling SDK %s... failed", version)
 			return err

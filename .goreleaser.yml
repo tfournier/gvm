@@ -52,6 +52,14 @@ brew:
     name: homebrew-tap
   description: "GVM will allow you to easily install, use and/or delete Golang versions from the official servers."
 
+snapcraft:
+  name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+  summary: "Easy Golang Version Manager."
+  description: "GVM will allow you to easily install, use and/or delete Golang versions from the official servers."
+  grade: stable
+  confinement: strict
+  publish: true
+
 scoop:
   bucket:
     owner: tfournier
