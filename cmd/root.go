@@ -9,7 +9,7 @@ import (
 var version string
 
 var rootCmd = &cobra.Command{
-	Use:          "gvm",
+	Use:          "gvm [command]",
 	Short:        "Golang Version Manager",
 	SilenceUsage: true,
 	Version:      version,

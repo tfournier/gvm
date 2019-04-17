@@ -8,9 +8,9 @@ import (
 )
 
 var showCmd = &cobra.Command{
-	Use:     "show",
+	Use:     "show [version]",
 	Aliases: []string{"s"},
-	Short:   "Show SDK",
+	Short:   "Show SDK version",
 	Args: func(cmd *cobra.Command, args []string) error {
 		cobra.MinimumNArgs(1)
 		if len(args) == 0 {

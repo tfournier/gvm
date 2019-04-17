@@ -14,7 +14,7 @@ require (
 	github.com/spf13/cobra v0.0.3
 	github.com/spf13/pflag v1.0.3 // indirect
 	github.com/stretchr/testify v1.3.0
-	github.com/tfournier/zshcompletion v0.0.0-20190413224725-7d66728d4ea5
+	github.com/tfournier/completion v0.0.3
 	github.com/xi2/xz v0.0.0-20171230120015-48954b6210f8 // indirect
 	gopkg.in/yaml.v2 v2.2.2 // indirect
 )

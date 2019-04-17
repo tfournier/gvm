@@ -5,15 +5,15 @@ import (
 	"github.com/tfournier/gvm/src"
 )
 
-var infoCmd = &cobra.Command{
-	Use:   "info",
-	Short: "Info SDK used",
+var initCmd = &cobra.Command{
+	Use:     "init",
+	Short:   "Initialize GVM",
 	Args:    cobra.MaximumNArgs(0),
 	RunE: func(cmd *cobra.Command, args []string) error {
-		return src.GVM().SDK().Info()
+		return src.GVM().Initialize(cmd.Root())
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(infoCmd)
+	rootCmd.AddCommand(initCmd)
 }

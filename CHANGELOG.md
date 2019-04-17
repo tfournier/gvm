@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2019-04-15
+### Added
+- Init command (Create folders and completion files (Zsh & Bash))
+### Edited
+- Completion library [v0.0.3](https://github.com/tfournier/completion)
+- Config command for show directly environment configuration variable
+- Argument format in functions
+- Commands documentation
+### Deleted
+- Config/Completion command
+- Config/Show command
+
 ## [1.0.3] - 2019-04-15
 ### Edited
 - Snap configuration
@@ -34,6 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Config/Show
 - Config/Completion/Zsh
 
+[1.1.0]: https://github.com/tfournier/gvm/compare/1.0.3...1.1.0
 [1.0.3]: https://github.com/tfournier/gvm/compare/1.0.2...1.0.3
 [1.0.2]: https://github.com/tfournier/gvm/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/tfournier/gvm/compare/1.0.0...1.0.1

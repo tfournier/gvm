@@ -1,19 +1,19 @@
-## gvm list
+## gvm init
 
-List SDK installed
+Initialize GVM
 
 ### Synopsis
 
-List SDK installed
+Initialize GVM
 
 ```
-gvm list [flags]
+gvm init [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help   help for list
+  -h, --help   help for init
 ```
 
 ### SEE ALSO

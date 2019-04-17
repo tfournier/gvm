@@ -6,7 +6,7 @@ import (
 )
 
 var installCmd = &cobra.Command{
-	Use:     "install <version>",
+	Use:     "install [version]",
 	Aliases: []string{"i"},
 	Short:   "Install SDK",
 	Args:    cobra.MinimumNArgs(1),

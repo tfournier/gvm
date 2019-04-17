@@ -21,7 +21,8 @@ snap install gvm
 ## For windows ([Scoop](https://scoop.sh/))
 
 ```bash
-scoop install gvm
+scoop bucket add tfournier https://github.com/tfournier/scoop-bucket.git
+scoop install tfournier/gvm
 ```
 
 ## Manually

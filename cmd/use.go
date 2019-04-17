@@ -6,7 +6,7 @@ import (
 )
 
 var useCmd = &cobra.Command{
-	Use:     "use <version>",
+	Use:     "use [version]",
 	Aliases: []string{"u"},
 	Short:   "Switch SDK",
 	Args:    cobra.MinimumNArgs(1),

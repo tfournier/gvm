@@ -6,9 +6,9 @@ import (
 )
 
 var removeCmd = &cobra.Command{
-	Use:     "remove <version>",
+	Use:     "remove [version]",
 	Aliases: []string{"r"},
-	Short:   "Remove local Golang version",
+	Short:   "Remove SDK version",
 	Args:    cobra.MinimumNArgs(1),
 	RunE: func(cmd *cobra.Command, args []string) error {
 		purge, err := cmd.Flags().GetBool("purge")
