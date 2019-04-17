@@ -8,7 +8,7 @@ import (
 var infoCmd = &cobra.Command{
 	Use:   "info",
 	Short: "Info SDK used",
-	Args:    cobra.MaximumNArgs(0),
+	Args:  cobra.MaximumNArgs(0),
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return src.GVM().SDK().Info()
 	},
