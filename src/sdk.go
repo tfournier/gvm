@@ -14,7 +14,7 @@ import (
 )
 
 const (
-	golangDownloadURL  string = "https://dl.google.com/go"
+	golangDownloadURL  string = "https://golang.org/dl"
 	sdkDirName         string = "sdk"
 	sdkUsedDirName     string = "current"
 	sdkDownloadDirName string = ".downloads"
